@@ -1,0 +1,5 @@
+Map parsing
+Solid - 0 0 255
+Platform - 0 255 0
+Damage - 255 0 0
+Decor - 0 0 0
