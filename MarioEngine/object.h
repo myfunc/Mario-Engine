@@ -73,12 +73,12 @@ namespace mir {
 		Vector2f getScreenPosition();
 
 		Sprite getSprite(int index = CurrentFrame);
-
+ 
 		Vector2u getTextureSize();
 
 		void setSprite(const Sprite& spr);
 
-		/* Методы для работы с фреймами спрайта */
+		/* ГЊГҐГІГ®Г¤Г» Г¤Г«Гї Г°Г ГЎГ®ГІГ» Г± ГґГ°ГҐГ©Г¬Г Г¬ГЁ Г±ГЇГ°Г Г©ГІГ  */
 		void snapToFrame(int w, int h);
 		void pushFrame(const Frame& frame);
 		void setFrameIndex(int index);
@@ -94,12 +94,12 @@ namespace mir {
 		Frame getCurrentFrame();
 		void reflectFrame();
 
-		/* Переопределенные методы */
+		/* ГЏГҐГ°ГҐГ®ГЇГ°ГҐГ¤ГҐГ«ГҐГ­Г­Г»ГҐ Г¬ГҐГІГ®Г¤Г» */
 		void setTextureRect(const Frame& frame);
 
 		virtual bool iteration(const TimeStamp& time) { return false; };
 
-		// Применяем текущий кадр анимации к спрайту
+		// ГЏГ°ГЁГ¬ГҐГ­ГїГҐГ¬ ГІГҐГЄГіГ№ГЁГ© ГЄГ Г¤Г° Г Г­ГЁГ¬Г Г¶ГЁГЁ ГЄ Г±ГЇГ°Г Г©ГІГі
 		void start();
 		void pause();
 		void reload();
@@ -112,10 +112,10 @@ namespace mir {
 
 		Frame getMask();
 		FloatRect getMaskedFrame();
-		// методы копирующие логику GameMaker коструктора. Для своего удобства именя методов тоже заимствованы.
+		// Г¬ГҐГІГ®Г¤Г» ГЄГ®ГЇГЁГ°ГіГѕГ№ГЁГҐ Г«Г®ГЈГЁГЄГі GameMaker ГЄГ®Г±ГІГ°ГіГЄГІГ®Г°Г . Г„Г«Гї Г±ГўГ®ГҐГЈГ® ГіГ¤Г®ГЎГ±ГІГўГ  ГЁГ¬ГҐГ­Гї Г¬ГҐГІГ®Г¤Г®Гў ГІГ®Г¦ГҐ Г§Г ГЁГ¬Г±ГІГўГ®ГўГ Г­Г».
 		void instance_destroy();
-		// Принимает указатель на объект созданный динамически. Его указатель попадает в группу.
-		// Если группа Динамическая, она жее объект и удалит. Если нет, будут проблемы...
+		// ГЏГ°ГЁГ­ГЁГ¬Г ГҐГІ ГіГЄГ Г§Г ГІГҐГ«Гј Г­Г  Г®ГЎГєГҐГЄГІ Г±Г®Г§Г¤Г Г­Г­Г»Г© Г¤ГЁГ­Г Г¬ГЁГ·ГҐГ±ГЄГЁ. Г…ГЈГ® ГіГЄГ Г§Г ГІГҐГ«Гј ГЇГ®ГЇГ Г¤Г ГҐГІ Гў ГЈГ°ГіГЇГЇГі.
+		// Г…Г±Г«ГЁ ГЈГ°ГіГЇГЇГ  Г„ГЁГ­Г Г¬ГЁГ·ГҐГ±ГЄГ Гї, Г®Г­Г  Г¦ГҐГҐ Г®ГЎГєГҐГЄГІ ГЁ ГіГ¤Г Г«ГЁГІ. Г…Г±Г«ГЁ Г­ГҐГІ, ГЎГіГ¤ГіГІ ГЇГ°Г®ГЎГ«ГҐГ¬Г»...
 		void instance_create(Object *obj);
 
 		
