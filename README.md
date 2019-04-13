@@ -6,3 +6,6 @@ After you install SFML, and prepare your environment to run the project in debug
 
 Control:
   Keyboard arrows and "space" button for jumps.
+
+
+  ![view-image](https://raw.githubusercontent.com/myfunc/Mario-Engine/master/Screenshots/scr1.PNG)
